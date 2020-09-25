@@ -1,0 +1,21 @@
+.hide{
+    display: none;
+    
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear:both
+}
+#reset-container,h1{
+    text-align: center;
+    color: lightskybluecs;
+    
+    
+    font-style: oblique;
+    color:fuchsia;
+}
