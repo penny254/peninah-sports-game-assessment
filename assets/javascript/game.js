@@ -1,51 +1,64 @@
 let resetbuttom=document.querySelector("#reset_button")
-letresetNum = document.querySelector("#num-resets");
+let resetNum = document.querySelector("#num-resets");
 
 
 console.log("resetbuttom")
-
-let resetbutton = document.querySelector("resetbutton");
+let countreset=document.querySelector("#num-resets")
+let resetbutton = document.querySelector("#reset-button");
 let count=0
-resetButton .addEventListener("click",function ()  {
+
+resetbutton .addEventListener("click",function ()  {
       console.log("resetButton clicked.");
+    if (teamoneNumgoals.innerHTML>teamtwoNumgoals.innerHTML){
 
-count +=1;
+    
+            alert("Team one won!")}
+        else{
+        alert("Team two win!")  }
+  count +=1;
+  countreset.innerHTML=count
+  countTeamOne=0
+  teamoneNumgoals.innerHTML=0
+  teamonenumshoot.innerHTML=0
+  shoots = 0;
+  teamtwoNumgoals.innerHTML=0
+  teamtwonumshots.innerHTML=0
+  shoots=0
+
+  
+
 })
-if (teamOneGoal.innerHTML < teamTwoGoal.innerHTML) {
-alert("Team two win!");  } 
-elseif (teamOneGoal.innerHTML  < teamTwoGoal.innerHTML);{
-    alert("Team one won!")}   elseifalert("Draw!");  resetNum.innerHTML = count;
-teamTwoShoot.innerHTML = 0;
-teamOneShoot.innerHTML = 0;
-teamTwoGoal.innerHTML = 0;
-teamOneGoal.innerHTML = 0;
-countTeamOne = 0;
-countTeamTwo = 0;
-goalTwo = 0;
-goalOne = 0;  
 
-let team1shootsbutton=document.querySelector("#teamone_shoots_button");
-let  team1numshoots=document.querySelector("#team1_numshoots")
-letteamOneGoal = document.querySelector("#teamone-numgoals");
+let teamoneNumgoals=document.querySelector("#teamone-numgoals")
+let teamtwoNumgoals=document.querySelector("#teamtwo-numgoals")
+ 
+      
 
-letcountTeamOne = 0;
-letgoalOne = 0;
-shootButton.addEventListener("click", function () {
-    countTeamOne += 1;
-    teamOneShoot.innerHTML = countTeamOne;  
-    if (Math.random() <1) {
-        goalOne += 1;
-        teamOneGoal.innerHTML = goalOne;  }});  
+let teamoneShootButton=document.querySelector("#teamone-shoot-button");
+let  teamonenumshoot=document.querySelector("#teamone-numshots")
+let countTeamOne = 0;
+let shoots = 0;
+
+teamoneShootButton.addEventListener("click", function () {
+  if (Math.random() <0.5) {
+      countTeamOne+=1
+      teamoneNumgoals.innerHTML=countTeamOne;
+  }
+        shoots += 1;
+        teamonenumshoot.innerHTML = shoots;  });  
 
 
-let team2shootsbutton=document.querySelector("#team2_shoots_button");
+let teamtwoshootsbutton=document.querySelector("#teamtwo-shoot-button");
 
-let tean2numshoots=document.querySelector("#team2_numshoot")
-letteamTwoGoal = document.querySelector("#teamtwo-numgoals");
-  letcountTeamTwo = 0;
-  letgoalTwo = 0;
-  shootButton2.addEventListener("click", function () {
-      countTeamTwo += 1;teamTwoShoot.innerHTML = countTeamTwo;  
-      if (Math.random() > 0.2) {goalTwo += 1;
-        teamTwoGoal.innerHTML = goalTwo;  }});
+let teamtwonumshots=document.querySelector("#teamtwo-numshots")
+let teamtwoGoal = document.querySelector("#teamtwo-numgoals");
+  let countTeamTwo = 0;
+  teamtwoshootsbutton.addEventListener("click", function () {
+      countTeamTwo += 1;
+      
+      if (Math.random() > 0.2) {
+        teamtwoNumgoals.innerHTML=countTeamTwo;
+          shoots += 1;
+          teamtwonumshots.innerHTML = shoots;  }});
 
+          
